@@ -1,0 +1,120 @@
+@import "base";
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background;
+    color: $white;
+    @include displayFlex(column, center, center);
+    &__profile {
+        @include boxSize(500px, 450px);
+        &--header {
+            @include displayFlex(row, space-between, center);
+            margin-bottom: 20px;
+        }
+        &--theme {
+            @include displayFlex(row, space-between, center);
+            cursor: pointer;
+        }
+        &--logo {
+            @include font(28px, 700, $white);
+        }
+        &--text {
+            margin-right: 12px;
+            @include font(14px, 400, $white);
+        }
+        &--input {
+            position: relative;
+        }
+        &--search {
+            @include boxSize(100%, 46px);
+            background-color: $backgroundLight;
+            border-radius: 8px;
+            border: none;
+            padding: 0 100px 0 50px;
+            color: $white;
+            &::-webkit-input-placeholder {
+                color: $white;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &--button {
+            height: 38px;
+            position: absolute;
+            color: $white;
+            padding: 0 15px;
+            border-radius: 8px;
+            right: 6px;
+            top: 4px;
+            outline: none;
+            border: none;
+            background-color: $blue;
+            cursor: pointer;
+        }
+        &--details {
+            width: 100%;
+            background-color: $backgroundLight;
+            display: flex;
+            margin-top: 20px;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        &--avatar {
+            @include boxSize(100px, 100px);
+            border-radius: 50%;
+            background-color: $white;
+            margin-right: 30px;
+        }
+        &--info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        &--top {
+            @include displayFlex(row, space-between, center);
+        }
+        &--name {
+            @include font(18px, 700, $white);
+        }
+        &--date {
+            @include font(10px, 400, $white);
+        }
+        &--username {
+            @include font(12px, 400, $blue);
+            margin: 5px 0 15px 0;
+        }
+        &--bio {
+            @include font(12px, 400, $text);
+        }
+        &--stats {
+            @include boxSize(100%, null);
+            @include displayFlex(row, space-between, center);
+            margin: 20px 0;
+            background-color: $background;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
+        &--title {
+            @include font(12px, 400, $text);
+        }
+        &--links {
+            display: flex;
+        }
+        &--link {
+            @include displayFlex(row, space-between, center);
+            @include font(10px, 400, $white);
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        &--lnk {
+            @include displayFlex(column, space-between, flex-start);
+            margin-right: 20px;
+        }
+        &--txt {
+            margin-left: 10px;
+        }
+    }
+}
+

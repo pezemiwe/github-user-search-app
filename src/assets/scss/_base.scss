@@ -1,0 +1,24 @@
+$background: #141c2f;
+$blue: #0c57af;
+$white: #ffffff;
+$transparent: transparent;
+$backgroundLight: #1f2a48;
+$text: #a3a9b5;
+
+@mixin boxSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin displayFlex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
